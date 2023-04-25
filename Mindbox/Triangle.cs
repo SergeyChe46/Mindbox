@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mindbox
 {
-    public class Triangle : Shape
+    public class Triangle : Shape, ISquare
     {
         private double _a, _b, _c;
         private double firstCatet, secondCatet, hipotenusa;
@@ -22,7 +22,7 @@ namespace Mindbox
             _c = sideC;
         }
 
-        public override double GetSquare()
+        public double GetSquare()
         {
             double square;
             if (IsSquareness(new double[]{ _a, _b, _c}))

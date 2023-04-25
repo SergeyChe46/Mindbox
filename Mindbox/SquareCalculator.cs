@@ -8,9 +8,9 @@ namespace Mindbox
 {
     public class SquareCalculator
     {
-        public double CalculateSquare(Shape shape)
+        public double CalculateSquare(ISquare squarable)
         {
-            return shape.GetSquare();
+            return squarable.GetSquare();
         }
     }
 }

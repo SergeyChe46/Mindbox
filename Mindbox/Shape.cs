@@ -11,10 +11,6 @@ namespace Mindbox
     /// </summary>
     public abstract class Shape
     {
-        /// <summary>
-        /// Возвращает площадь фигуры.
-        /// </summary>
-        /// <returns>Площадь фигуры.</returns>
-        public abstract double GetSquare();
+        
     }
 }

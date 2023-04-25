@@ -16,7 +16,7 @@ namespace MindBox.Test
         public void ReturnRightSquare(double sideA, double sideB ,double sideC)
         {
             // Arrange
-            Shape triangle = new Triangle(sideA, sideB, sideC);
+            Triangle triangle = new Triangle(sideA, sideB, sideC);
             SquareCalculator squareCalculator = new SquareCalculator();
 
             // Act

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mindbox
 {
-    public class Circle : Shape
+    public class Circle : Shape, ISquare
     {
         private double _radius;
         public double Radius { get => _radius; }
@@ -19,7 +19,7 @@ namespace Mindbox
             }
         }
         
-        public override double GetSquare()
+        public double GetSquare()
         {
             return Math.PI * Math.Pow(_radius, 2);
         }
