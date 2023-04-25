@@ -1,3 +1,3 @@
-﻿SELECT * FROM GoodTypes
-LEFT JOIN Goods
-ON GoodTypes.good_type_id = Goods.good_id
+﻿SELECT * FROM Goods
+LEFT JOIN GoodTypes
+ON Goods.good_id = GoodTypes.good_type_id
