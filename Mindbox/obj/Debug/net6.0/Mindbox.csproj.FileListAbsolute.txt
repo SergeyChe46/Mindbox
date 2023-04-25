@@ -1,0 +1,15 @@
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.csproj.AssemblyReference.cache
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.AssemblyInfoInputs.cache
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.AssemblyInfo.cs
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\bin\Debug\net6.0\Mindbox.exe
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\bin\Debug\net6.0\Mindbox.deps.json
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\bin\Debug\net6.0\Mindbox.runtimeconfig.json
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\bin\Debug\net6.0\Mindbox.dll
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\bin\Debug\net6.0\Mindbox.pdb
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.dll
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\refint\Mindbox.dll
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.pdb
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\Mindbox.genruntimeconfig.cache
+C:\Users\Сергей\source\repos\Mindbox\Mindbox\obj\Debug\net6.0\ref\Mindbox.dll
