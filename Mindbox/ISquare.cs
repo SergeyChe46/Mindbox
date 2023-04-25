@@ -12,6 +12,6 @@ namespace Mindbox
         /// Возвращает площадь фигуры.
         /// </summary>
         /// <returns>Площадь фигуры.</returns>
-        public abstract double GetSquare();
+        public double GetSquare();
     }
 }
