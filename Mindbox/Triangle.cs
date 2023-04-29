@@ -41,7 +41,7 @@ namespace Mindbox
         /// <summary>
         /// Полупериметр для вычисления площади не прямоугольного треугольника.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Полупериметр.</returns>
         private double HalfPerimeter()
         {
             return (_a + _b + _c) / 2;
