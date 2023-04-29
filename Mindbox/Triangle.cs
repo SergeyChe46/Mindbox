@@ -54,13 +54,12 @@ namespace Mindbox
         /// <returns></returns>
         public bool IsSquareness(double[] inputedSides)
         {
-            double[] sides = inputedSides;
-            // Самая длинная сторона это гипотенуза.
-            hipotenusa = sides.Max();
+            Array.Sort(inputedSides);
+            // Самая длинная сторона - последняя в сортированном массиве - гипотенуза.
             // Остальные две - катеты.
-            sides.ToList().Remove(hipotenusa);
-            firstCatet = sides[0];
-            secondCatet = sides[1];
+            hipotenusa = inputedSides[^1];
+            firstCatet = inputedSides[0];
+            secondCatet = inputedSides[1];
             // Если треугольник НЕ прямоугольный, то вернёт false.
             bool isSquareness = Math.Pow(hipotenusa, 2) == Math.Pow(firstCatet, 2) + Math.Pow(secondCatet, 2);
             Console.WriteLine($"Треугольник {(isSquareness ? "" : "не ")}прямоугольный");
