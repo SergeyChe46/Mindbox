@@ -38,10 +38,11 @@ namespace MindBox.Test
         public void ReturnIsSquareness(double sideA, double sideB, double sideC)
         {
             // Arrange
-            Triangle triangle = new Triangle(sideA, sideB, sideC);
+            ShapeFactory triangleFactory = new TriangleFactory(sideA, sideB, sideC);
+            Shape triangle = triangleFactory.Create();
 
             // Act
-            bool isSquareness = triangle.IsSquareness(new double[] { sideA, sideB, sideC });
+            bool isSquareness = ((Triangle)triangle).IsSquareness(new double[] { sideA, sideB, sideC });
 
             // Assert
             Assert.True(isSquareness);
@@ -54,10 +55,11 @@ namespace MindBox.Test
         public void ReturnIsNotSquareness(double sideA, double sideB, double sideC)
         {
             // Arrange
-            Triangle triangle = new Triangle(sideA, sideB, sideC);
+            ShapeFactory triangleFactory = new TriangleFactory(sideA, sideB, sideC);
+            Shape triangle = triangleFactory.Create();
 
             // Act
-            bool isSquareness = triangle.IsSquareness(new double[] { sideA, sideB, sideC });
+            bool isSquareness = ((Triangle)triangle).IsSquareness(new double[] { sideA, sideB, sideC });
 
             // Assert
             Assert.False(isSquareness);
@@ -72,7 +74,9 @@ namespace MindBox.Test
             // Arrange
             // Act
             // Assert
-            Assert.Throws<ArgumentException>(() => new Triangle(sideA, sideB, sideC));
+            ShapeFactory triangleFactory = new TriangleFactory(sideA, sideB, sideC);
+            
+            Assert.Throws<ArgumentException>(() => triangleFactory.Create());
         }
     }
 }
