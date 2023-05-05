@@ -1,4 +1,6 @@
 ﻿using Mindbox;
+using Mindbox.Factories;
+using Mindbox.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +18,15 @@ namespace MindBox.Test
         public void ReturnRightSquare(double radius)
         {
             // Arrange
-            Circle circle = new Circle(radius);
+            ShapeFactory circleFactory = new CircleFactory(radius);
+            Shape circle = circleFactory.Create();
             SquareCalculator squareCalculator = new SquareCalculator();
 
             // Act
             double circleSquare = squareCalculator.CalculateSquare(circle);
-
+            double expected = Math.PI * Math.Pow(((Circle)circle).Radius, 2);
             // Assert
-            Assert.Equal(Math.PI * Math.Pow(circle.Radius, 2), circleSquare);
+            Assert.Equal(expected, circleSquare);
         }
 
         [Theory]

@@ -4,37 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mindbox
+namespace Mindbox.Shapes
 {
-    public class Triangle : Shape, ISquare
+    public class Triangle : Shape
     {
-        private double _a, _b, _c;
+        private double _sideA, _sideB, _sideC;
         private double firstCatet, secondCatet, hipotenusa;
+
+        public double SideA
+        {
+            get => _sideA;
+            set => _sideA = value > 0 ? value : throw new ArgumentException("Сторона должна быть больше нуля");
+        }
+        public double SideB
+        {
+            get => _sideB;
+            set => _sideB = value > 0 ? value : throw new ArgumentException("Сторона должна быть больше нуля");
+        }
+        public double SideC
+        {
+            get => _sideC;
+            set => _sideC = value > 0 ? value : throw new ArgumentException("Сторона должна быть больше нуля");
+        }
 
         public Triangle(double sideA, double sideB, double sideC)
         {
-            if (sideA <= 0 || sideB <= 0 || sideC <= 0)
-            {
-                throw new ArgumentException("Стороны должны быть неотрицательными");
-            }
-            _a = sideA;
-            _b = sideB;
-            _c = sideC;
+            SideA = sideA;
+            SideB = sideB;
+            SideC = sideC;
         }
 
-        public double GetSquare()
+        public override double GetSquare()
         {
             double square;
-            if (IsSquareness(new double[]{ _a, _b, _c}))
+            if (IsSquareness(new double[] { _sideA, _sideB, _sideC }))
             {
-                square = (firstCatet * secondCatet) / 2;
+                square = firstCatet * secondCatet / 2;
             }
             else
             {
                 double hp = HalfPerimeter();
-                square = Math.Sqrt(hp * (hp -_a) * (hp - _b) * (hp - _c));
+                square = Math.Sqrt(hp * (hp - _sideA) * (hp - _sideB) * (hp - _sideC));
             }
-            
+
             return square;
         }
 
@@ -44,7 +56,7 @@ namespace Mindbox
         /// <returns>Полупериметр.</returns>
         private double HalfPerimeter()
         {
-            return (_a + _b + _c) / 2;
+            return (_sideA + _sideB + _sideC) / 2;
         }
 
         #region IsSquareness

@@ -1,4 +1,6 @@
 ﻿using Mindbox;
+using Mindbox.Factories;
+using Mindbox.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,8 @@ namespace MindBox.Test
         public void ReturnRightSquare(double sideA, double sideB ,double sideC)
         {
             // Arrange
-            Triangle triangle = new Triangle(sideA, sideB, sideC);
+            ShapeFactory triangleFactory = new TriangleFactory(sideA, sideB, sideC);
+            Shape triangle = triangleFactory.Create();
             SquareCalculator squareCalculator = new SquareCalculator();
 
             // Act
