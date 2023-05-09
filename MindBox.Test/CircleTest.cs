@@ -17,15 +17,12 @@ namespace MindBox.Test
         [InlineData(200)]
         public void ReturnRightSquare(double radius)
         {
-            // Arrange
             ShapeFactory circleFactory = new CircleFactory(radius);
             Shape circle = circleFactory.Create();
             SquareCalculator squareCalculator = new SquareCalculator();
 
-            // Act
             double circleSquare = squareCalculator.CalculateSquare(circle);
-            double expected = Math.PI * Math.Pow(((Circle)circle).Radius, 2);
-            // Assert
+            double expected = Math.PI * Math.Pow(radius, 2);
             Assert.Equal(expected, circleSquare);
         }
 
@@ -35,9 +32,6 @@ namespace MindBox.Test
         [InlineData(-120)]
         public void NegativeRadiusException(double nonPositiveRadius)
         {
-            // Arrange
-            // Act
-            // Assert
             Assert.Throws<ArgumentException>(() => new Circle(nonPositiveRadius));
         }
     }
